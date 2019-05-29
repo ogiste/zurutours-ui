@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-webpack",
+  "name": "zurutours-ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bl4ck4ndbr0wn/react-redux-webpack.git"
+    "url": "git+https://github.com/ogiste/zurutours-ui.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bl4ck4ndbr0wn/react-redux-webpack/issues"
+    "url": "https://github.com/ogiste/zurutours-ui/issues"
   },
-  "homepage": "https://github.com/bl4ck4ndbr0wn/react-redux-webpack#readme",
+  "homepage": "https://github.com/ogiste/zurutours-ui#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
@@ -33,6 +33,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "history": "^4.9.0",
+    "moment": "^2.24.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",

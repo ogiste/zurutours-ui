@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Josefin Sans Light";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans Bold";
+  font-weight: bold;
+  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-weight: bold;
+  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans SemiBold";
+  font-weight: bold;
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans SemiBoldItalic";
+  font-weight: bold;
+  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Josefin Sans Italic";
+  font-weight: bold;
+  src: url("../fonts/Josefin_Sans/JosefinSans-Italic.ttf") format("truetype");
+}
+
+* {
+  --color-primary: #c92d30;
+  --color-primary-light: #e38759;
+  --color-secondary: #8f7368;
+  --color-secondary-light: #ac9391;
+  --color-gray-light: #f0f5fa;
+}
+
+body {
+  background-image: url('../images/ToTheBeach.png');
+  color: #000011;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Josefin Sans", serif;
+}
