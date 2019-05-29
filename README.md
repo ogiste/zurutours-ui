@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/a432721f785ec66cbeef/maintainability)](https://codeclimate.com/github/bl4ck4ndbr0wn/react-redux-webpack/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a432721f785ec66cbeef/test_coverage)](https://codeclimate.com/github/bl4ck4ndbr0wn/react-redux-webpack/test_coverage) [![Build Status](https://travis-ci.org/bl4ck4ndbr0wn/react-redux-webpack.svg?branch=develop)](https://travis-ci.org/bl4ck4ndbr0wn/react-redux-webpack) [![Coverage Status](https://coveralls.io/repos/github/bl4ck4ndbr0wn/react-redux-webpack/badge.svg?branch=chore/166102709-code-climate-coverage)](https://coveralls.io/github/bl4ck4ndbr0wn/react-redux-webpack?branch=chore/166102709-code-climate-coverage)
+
 # React redux using Webpack and Babel 
 react-starter is a simple starting point for Single Page Apps using React, Babel, and Webpack.
 
