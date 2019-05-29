@@ -1,166 +1,145 @@
 import React, {Component} from 'react';
-import {
-  Grid,
-  Placeholder,
-  Segment
-} from 'semantic-ui-react';
+import {Card, Grid, Placeholder,} from 'semantic-ui-react';
 
-class Tours extends Component {
+class ToursPlaceholder extends Component {
   render() {
     return (
         <Grid columns={3} stackable>
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
-          </Grid.Column>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='short'/>
+                    <Placeholder.Line length='long'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='long'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='long'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
 
-          <Grid.Column>
-            <Segment raised>
-              <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
-              </Placeholder>
-            </Segment>
           </Grid.Column>
-
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='very short'/>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
+
           </Grid.Column>
-
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='very short'/>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
+
           </Grid.Column>
-
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='very short'/>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
+
           </Grid.Column>
-
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='very short'/>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
+
           </Grid.Column>
-
           <Grid.Column>
-            <Segment raised>
+            <Card>
               <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
+                <Placeholder.Image rectangular/>
               </Placeholder>
-            </Segment>
-          </Grid.Column>
+              <Card.Content>
+                <Placeholder>
+                  <Placeholder.Header>
+                    <Placeholder.Line length='very short'/>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Header>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                  <Placeholder.Paragraph>
+                    <Placeholder.Line length='medium'/>
+                  </Placeholder.Paragraph>
+                </Placeholder>
+              </Card.Content>
+            </Card>
 
-          <Grid.Column>
-            <Segment raised>
-              <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
-              </Placeholder>
-            </Segment>
-          </Grid.Column>
-
-          <Grid.Column>
-            <Segment raised>
-              <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
-              </Placeholder>
-            </Segment>
-          </Grid.Column>
-
-          <Grid.Column>
-            <Segment raised>
-              <Placeholder>
-                <Placeholder.Header image>
-                  <Placeholder.Line/>
-                  <Placeholder.Line/>
-                </Placeholder.Header>
-                <Placeholder.Paragraph>
-                  <Placeholder.Line length="medium"/>
-                  <Placeholder.Line length="short"/>
-                </Placeholder.Paragraph>
-              </Placeholder>
-            </Segment>
           </Grid.Column>
         </Grid>
     );
   }
 }
 
-export default Tours;
+export default ToursPlaceholder;

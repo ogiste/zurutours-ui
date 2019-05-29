@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {
-  Button,
-  Image,
-  Menu, Dropdown,
-} from 'semantic-ui-react';
+import {Button, Image, Menu,} from 'semantic-ui-react';
 import {connect} from 'react-redux';
 import {signOut} from '../../actions/authActions';
 
@@ -35,38 +31,23 @@ class HeaderComponent extends Component {
         value: 'SignOut',
       },
     ];
-    const {activeItem} = this.state;
     const {authenticated} = this.props;
     const LoginButton = (
         <Menu.Item
-            name="auth"
-            active={activeItem === 'auth'}
-            onClick={this.handleItemClick}
         >
           <Button.Group size="mini">
-            <Link to="/login">
-              <Button>Signin</Button>
-            </Link>
-
-            <Button.Or/>
-            <Link to="/register">
-              <Button positive>Signup</Button>
-            </Link>
+            <Button to="/login" as={Link} basic positive>Sign In</Button>
+            <Button to="/register" as={Link} basic color="orange">Sign Up</Button>
           </Button.Group>
         </Menu.Item>);
     const ToursDropdown = (
         <div style={{display: 'inherit'}}>
-          <Menu.Item
-              name="create-tour"
-              active={activeItem === 'create-tour'}
-          >
-            <Link to="/create-tour">
-              <Button size="tiny">Create A Tour</Button>
-            </Link>
-          </Menu.Item>
           <Menu.Item>
-            <Button size="tiny" negative onClick={() => this.props.signOut()}>Sign Out</Button>
-          </ Menu.Item>
+            <Button.Group size="mini">
+              <Button to="/create-tour" basic positive as={Link}>Create a Tour</Button>
+              <Button basic color="orange" onClick={() => this.props.signOut()}>Sign Out</Button>
+            </Button.Group>
+          </Menu.Item>
         </div>
 
     );
