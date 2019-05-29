@@ -8,3 +8,5 @@ dist/
 
 # Coverage directories
 coverage/
+
+.DS_Store
