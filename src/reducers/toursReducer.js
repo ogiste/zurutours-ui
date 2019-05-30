@@ -75,6 +75,7 @@ export default function (state = INITIAL_STATE, actions) {
     case UPDATE_TOUR_SUCCESS:
       return {
         ...state,
+        message: 'Tour details have been updated!',
         current_tour: actions.payload,
         loading: false,
       };
@@ -88,6 +89,7 @@ export default function (state = INITIAL_STATE, actions) {
     case DELETE_TOUR_SUCCESS:
       return {
         ...state,
+        message: 'Tour has been deleted',
         current_tour: actions.payload,
         loading: false,
       };

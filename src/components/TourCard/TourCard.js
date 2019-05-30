@@ -1,5 +1,7 @@
 import React from 'react';
 import {Button, Card, Icon, Label,} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import moment from 'moment';
 
 
 const TourCard = props => {
@@ -10,10 +12,10 @@ const TourCard = props => {
           <Icon name='money'/>
           {tour.cost} KSH
         </Label>
-        <br/>
+        <br/> <br/>
         {authenticated ? (
-            <Button.Group>
-              <Button basic info> Update Tour Details</Button>
+            <Button.Group size="mini">
+              <Button as={Link} to={`/edit-tour/${tour.id}`} basic color="teal"> Update Tour Details</Button>
               <Button basic color="orange"> Delete Tour</Button>
             </Button.Group>) : ''}
       </div>
@@ -21,7 +23,7 @@ const TourCard = props => {
   );
   const metaDescription = (
       <div>
-        <span>{tour.start_datetime} - {tour.end_datetime}</span>
+        <span>{moment(tour.start_datetime).format('Do-MMM-YYYY')} - {moment(tour.end_datetime).format('Do-MMM-YYYY')}</span>
         <br/>
         <span><b>Tour Capacity: {tour.capacity}</b></span>
       </div>

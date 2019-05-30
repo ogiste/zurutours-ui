@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Button, Form, Grid, Header, Message, Segment} from 'semantic-ui-react';
-import {createTour} from '../../actions/toursActions';
+import {createTour, updateTour} from '../../actions/toursActions';
 import moment from 'moment';
 
 export class TourForm extends Component {
@@ -22,9 +22,19 @@ export class TourForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps,) {
     if (nextProps.errorMessage) {
       this.setState({errorMessage: nextProps.errorMessage});
+    }
+    if (nextProps.current_tour && nextProps.tourEdit) {
+      this.setState({
+        title: nextProps.current_tour.title,
+        cost: nextProps.current_tour.cost,
+        capacity: nextProps.current_tour.capacity,
+        description: nextProps.current_tour.description,
+        start_datetime: moment(nextProps.current_tour.start_datetime).format('YYYY-MM-DD'),
+        end_datetime: moment(nextProps.current_tour.end_datetime).format('YYYY-MM-DD'),
+      });
     }
     return null;
   }
@@ -43,16 +53,17 @@ export class TourForm extends Component {
       description: this.state.description,
       start_datetime: moment(this.state.start_datetime).format('YYYY-MM-DDThh:mm'),
       end_datetime: moment(this.state.end_datetime).format('YYYY-MM-DDThh:mm'),
-      errorMessage: {}
     };
-
+    if (this.props.tourEdit) {
+      return this.props.updateTour({tourId: this.props.current_tour.id, formProps});
+    }
     this.props.createTour(formProps, this.props.history);
   }
 
   render() {
     const {title, cost, capacity, description, start_datetime, end_datetime,} = this.state;
 
-    const {loading, errorMessage, message, authenticated} = this.props;
+    const {loading, errorMessage, message, authenticated, tourEdit} = this.props;
     if (!authenticated) {
       return (
           <Message
@@ -79,7 +90,7 @@ export class TourForm extends Component {
                     fontFamily: 'Josefin Sans Bold'
                   }}
               >
-                Create a tour
+                {!tourEdit ? 'Create a tour' : 'Edit Tour Details'}
               </Header>
 
               <Form size="large" loading={loading} onSubmit={this.handleSubmit}>
@@ -220,7 +231,7 @@ export class TourForm extends Component {
                         backgroundColor: 'rgb(95, 179, 219)'
                       }}
                   >
-                    Create a tour
+                    {!tourEdit ? 'Create a tour' : 'Update Tour Details'}
                   </Button>
                 </Segment>
               </Form>
@@ -234,8 +245,10 @@ export class TourForm extends Component {
 TourForm.propTypes = {
   errorMessage: PropTypes.object,
   loading: PropTypes.bool,
+  tourEdit: PropTypes.bool,
   authenticated: PropTypes.bool.required,
-  createTour: PropTypes.func.isRequired,
+  createTour: PropTypes.func,
+  updateTour: PropTypes.func,
 };
 
 export const mapStateToProps = ({auth, tour}) => {
@@ -251,5 +264,5 @@ export const mapStateToProps = ({auth, tour}) => {
 
 export default connect(
     mapStateToProps,
-    {createTour}
+    {createTour, updateTour}
 )(TourForm);
