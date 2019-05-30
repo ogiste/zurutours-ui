@@ -26,6 +26,7 @@ export default function (state = INITIAL_STATE, actions) {
     case TOUR_LOADING:
       return {
         ...state,
+        message: undefined,
         errorMessage: {},
         loading: true,
       };
@@ -90,7 +91,7 @@ export default function (state = INITIAL_STATE, actions) {
       return {
         ...state,
         message: 'Tour has been deleted',
-        current_tour: actions.payload,
+        tours: state.tours.filter((tour) => (tour.id !== actions.payload.id)),
         loading: false,
       };
     case DELETE_TOUR_ERROR:

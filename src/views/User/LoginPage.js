@@ -3,15 +3,9 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {signIn} from '../../actions/authActions';
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Message,
-  Segment
-} from 'semantic-ui-react';
+import {Button, Form, Grid, Header, Message, Segment} from 'semantic-ui-react';
 import {getAuthToken} from '../../utils/setAuthToken';
+import {Redirect} from 'react-router';
 
 export class LoginPage extends Component {
   constructor(props) {
@@ -50,7 +44,10 @@ export class LoginPage extends Component {
 
   render() {
     const {password, username, errorMessage,} = this.state;
-    const {loading} = this.props;
+    const {loading, authenticated} = this.props;
+    if (authenticated) {
+      return (<Redirect to="/"/>);
+    }
     return (
         <div className="login-form">
           <Grid
@@ -155,6 +152,7 @@ LoginPage.propTypes = {
 
 export const mapStateToProps = ({auth}) => {
   return {
+    authenticated: auth.authenticated,
     loading: auth.loading,
     errorMessage: auth.errorMessage,
     user: auth.user,

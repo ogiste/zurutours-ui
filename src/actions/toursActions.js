@@ -2,6 +2,8 @@ import {api} from '../services/Api';
 import {
   CREATE_TOUR_ERROR,
   CREATE_TOUR_SUCCESS,
+  DELETE_TOUR_ERROR,
+  DELETE_TOUR_SUCCESS,
   FETCH_TOUR_ERROR,
   FETCH_TOUR_SUCCESS,
   FETCH_TOURS_ERROR,
@@ -53,5 +55,16 @@ export const updateTour = formProps => (dispatch) => {
       })
       .catch((error) => {
         dispatch(failureMessage(error.response.data, UPDATE_TOUR_ERROR));
+      });
+};
+
+export const deleteTour = tourId => (dispatch) => {
+  dispatch(loadingMessage(TOUR_LOADING));
+  return api.tour.remove(tourId)
+      .then((response) => {
+        dispatch(successMessage({id: tourId}, DELETE_TOUR_SUCCESS));
+      })
+      .catch((error) => {
+        dispatch(failureMessage(error.response.data, DELETE_TOUR_ERROR));
       });
 };
