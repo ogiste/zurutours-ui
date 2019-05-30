@@ -1,17 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {signUp} from '../../actions/authActions';
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment
-} from 'semantic-ui-react';
+import {Button, Form, Grid, Header, Message, Segment} from 'semantic-ui-react';
 import {createTour} from '../../actions/toursActions';
 import moment from 'moment';
 
@@ -62,7 +52,16 @@ export class TourForm extends Component {
   render() {
     const {title, cost, capacity, description, start_datetime, end_datetime,} = this.state;
 
-    const {loading, errorMessage, message} = this.props;
+    const {loading, errorMessage, message, authenticated} = this.props;
+    if (!authenticated) {
+      return (
+          <Message
+              visible
+              negative
+              content="You are not signed in. Please sign in to use all available features. "
+          />
+      );
+    }
 
     return (
         <div className="login-form">
@@ -235,11 +234,13 @@ export class TourForm extends Component {
 TourForm.propTypes = {
   errorMessage: PropTypes.object,
   loading: PropTypes.bool,
+  authenticated: PropTypes.bool.required,
   createTour: PropTypes.func.isRequired,
 };
 
-export const mapStateToProps = ({tour}) => {
+export const mapStateToProps = ({auth, tour}) => {
   return {
+    authenticated: auth.authenticated,
     loading: tour.loading,
     errorMessage: tour.errorMessage,
     tours: tour.tours,

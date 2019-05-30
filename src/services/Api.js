@@ -10,6 +10,7 @@ export const api = {
   tour: {
     create: data => axios.post(`${API_URL}/tours/`, data),
     list: () => axios.get(`${API_URL}/tours/`),
+    get: tourId => axios.get(`${API_URL}/tours/${tourId}`),
     update: tourId => axios.patch(`${API_URL}/tours/${tourId}`),
     remove: tourId => axios.delete(`${API_URL}/tours/${tourId}`),
   }

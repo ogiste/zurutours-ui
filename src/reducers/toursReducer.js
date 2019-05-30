@@ -1,14 +1,16 @@
 import {
-  FETCH_TOURS_SUCCESS,
-  FETCH_TOURS_ERROR,
-  FETCH_TOUR_SUCCESS,
-  FETCH_TOUR_ERROR,
-  UPDATE_TOUR_SUCCESS,
-  UPDATE_TOUR_ERROR,
-  TOUR_LOADING,
-  CREATE_TOUR_SUCCESS,
   CREATE_TOUR_ERROR,
-  SIGN_OUT, DELETE_TOUR_SUCCESS, DELETE_TOUR_ERROR,
+  CREATE_TOUR_SUCCESS,
+  DELETE_TOUR_ERROR,
+  DELETE_TOUR_SUCCESS,
+  FETCH_TOUR_ERROR,
+  FETCH_TOUR_SUCCESS,
+  FETCH_TOURS_ERROR,
+  FETCH_TOURS_SUCCESS,
+  SIGN_OUT,
+  TOUR_LOADING,
+  UPDATE_TOUR_ERROR,
+  UPDATE_TOUR_SUCCESS,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -99,9 +101,7 @@ export default function (state = INITIAL_STATE, actions) {
     case SIGN_OUT:
       return {
         ...state,
-        tours: [],
         message: undefined,
-        current_tour: {},
         errorMessage: {},
         loading: false,
       };

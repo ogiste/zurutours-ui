@@ -2,6 +2,7 @@ import HomePage from '../views/Home/HomePage';
 import RegisterPage from '../views/User/RegisterPage';
 import LoginPage from '../views/User/LoginPage';
 import TourForm from '../components/TourForm/TourForm';
+import EditToursPage from '../views/Tours/EditToursPage';
 
 
 const routes = [
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/create-tour',
     component: TourForm,
+  },
+  {
+    path: '/edit-tour/:tourId',
+    component: EditToursPage,
   },
 ];
 
