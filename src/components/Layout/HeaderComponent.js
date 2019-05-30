@@ -44,7 +44,7 @@ class HeaderComponent extends Component {
         <div style={{display: 'inherit'}}>
           <Menu.Item>
             <Button.Group size="mini">
-              <Button to="/create-tour" basic positive as={Link}>Create a Tour</Button>
+              <Button to="/create-tour" basic secondary as={Link}>Create a Tour</Button>
               <Button basic color="orange" onClick={() => this.props.signOut()}>Sign Out</Button>
             </Button.Group>
           </Menu.Item>
