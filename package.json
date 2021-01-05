@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/ogiste/zurutours-ui#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
